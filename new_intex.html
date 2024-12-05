@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+      nav {
+    background-color: #ffffff; 
+    text-align: center;
+    margin: 0;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #cb0e6d;
+    transition: color 0.3s ease;
+}
+
+.navbar-toggler {
+    border-color: #cb0e6d;
+}
+
+.navbar-toggler-icon {
+    background-color: #cb0e6d;
+}
+
+.form-control {
+    width: 250px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.social-icons i:hover {
+    color: #cb0e6d;
+    cursor: pointer;
+}
+
+
+#home_main {
+    position: relative;
+    top: 120px;
+    text-align: center;
+    padding: 20px;
+}
+
+#home_main img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #333;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.container .btn {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color: #cb0e6d;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container .btn:hover {
+    background-color: #a8054f;
+}
+
+
+
+
+
+
+.container-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.column-base {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.column-base img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.container-base a {
+    display: block;
+    margin: 10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        text-align: left;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #home_main {
+        top: 90px;
+    }
+
+    .container .btn {
+        width: 100%;
+    }
+
+    .container-base {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-slide-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.carousel-slide {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 160px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    /* object-fit: contain; */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex: 1 0 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .column {
+        flex: 1 0 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container2 {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+      gap: 15px; /* Spacing between cards */
+    }
+
+    /* Card Styling */
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr; /* 1 card per row on extra-small screens */
+      }
+    }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- nav -->
+
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container-fluid">
+
+
+            <a class="navbar-brand" href="#">
+                <img src="logo.webp" alt="Logo" style="width:100px;" class="rounded-pill">
+            </a>
+          
+          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="mynavbar">
+            <ul class="navbar-nav me-auto">
+
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">SHOP NOW</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">ALL</a></li>
+                      <li><a class="dropdown-item " href="#">SALWAR</a></li>
+                      <li><a class="dropdown-item " href="#">SAREES</a></li>
+                      <li><a class="dropdown-item " href="#">DISCOUNT SALE</a></li>
+                    </ul> -->
+    
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">MEN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">WOMEN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">KIDS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">HOME&LIVING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">BEAUTY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">STUDIO</a>
+                </li>
+
+
+            </ul>
+
+           
+
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <!-- <button class="btn btn-primary" type="button">Search</button> -->
+            </form>
+
+            <div class="social-icons">
+                            <a href="#" target="_blank"><i class="bi bi-person"></i></a>
+                            <a href="#" target="_blank"><i class="bi bi-heart"></i></a>
+                            <a href="#" target="_blank"><i class="bi bi-basket2"></i></a>
+                        </div>
+        </div>
+    
+    </nav>
+      
+
+    <!-- home page -->
+
+    <div>
+        <div class="elementor-element elementor-element-771978f7 elementor-widget elementor-widget-image" id="home_main"  data-id="771978f7" data-element_type="widget" data-widget_type="image.default">
+            
+            <img class="img-fluid logo-spec no-lazy" src="myntra-home-final.png" alt="">
+            
+            <!-- <div class="elementor-widget-container" id="img_home">
+                <h1>WELCOME TO </h1>
+                <style>/*! elementor - v3.21.0 - 26-05-2024 */
+                    .elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style> <img decoding="async" width="400" height="120" src="https://chempakam.com/wp-content/uploads/2023/10/chempakam-logo-e1648124235657.png" data-src="https://chempakam.com/wp-content/uploads/2023/10/chempakam-logo-e1648124235657.png" class="attachment-full size-full wp-image-12190 lazy loaded" alt="" data-srcset="https://chempakam.com/wp-content/uploads/2023/10/chempakam-logo-e1648124235657.png 400w, https://chempakam.com/wp-content/uploads/2023/10/chempakam-logo-e1648124235657-300x90.png 300w" data-sizes="(max-width: 400px) 100vw, 400px" style="width:100%;height:30%;max-width:400px" sizes="(max-width: 400px) 100vw, 400px" srcset="https://chempakam.com/wp-content/uploads/2023/10/chempakam-logo-e1648124235657.png 400w, https://chempakam.com/wp-content/uploads/2023/10/chempakam-logo-e1648124235657-300x90.png 300w" data-was-processed="true"> 
+                    
+                    <h1>ONLINE SHOP</h1>
+                    <div class="container mt-3">
+                        <a href="#" class="btn text-black-50 btn-light">SHOP NOW</a><br><br>
+                        <a href="#" class="btn text-black-50 btn-light">DISCOUNT SALE</a>
+                    </div>
+            </div> -->
+                   
+            
+        </div>
+    </div>
+
+
+
+
+
+  
+    <div id="mountRoot" style="min-height:750px;margin-top:-2px">
+        <div data-reactroot=""><main class="shop-base"><div class="myx-base">
+            <div class="myx-indexContainer">
+                <div class="container-base myx-stretch    ">
+                    <div style="padding-bottom: 7.81%;">
+                        <div class="container-container container-aspectContainer">
+                            <div class=" row-base" style="display: flex;">
+                                <div class=" column-base" style="-moz-box-flex: 1; flex: 1 1 0%;">
+                                    <a href="https://myntra.com/online-fashion-store">
+                                        <div><picture draggable="false" class="img-responsive">
+                                            <source srcset="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/b70e072d-9110-4256-9724-830b3cab84251718623898350-FLAT-400-Off-on-1st-Purchase-Strip-----7.jpg" type="image/webp">
+                                            <img draggable="false" class="image-image undefined image-hand" src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/b70e072d-9110-4256-9724-830b3cab84251718623898350-FLAT-400-Off-on-1st-Purchase-Strip-----7.jpg" srcset="">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="myx-indexContainer">
+            <div class="container-base myx-stretch    ">
+                <div><div class="container-container ">
+                    <div class=" row-base" style="display: flex;">
+                        <div class=" column-base" style="-moz-box-flex: 1; flex: 1 1 0%;">
+                            <div class="container-base myx-stretch    ">
+                               
+                                    <div class="container-container container-aspectContainer">
+                                        <div class=" row-base" style="display: flex;">
+                                            <div class=" column-base" style="-moz-box-flex: 1; flex: 1 1 0%;">
+                                                <a href="https://www.myntra.com/myntra-fashion-store">
+                                                    <div>
+                                                        <picture draggable="false" class="img-responsive">
+                                                            <source srcset="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/e8a2ea55-9b2e-4ca0-8127-ca9e0984c49c1718623745662-DESKTOP-HP.jpg" type="image/webp">
+                                                            <img draggable="false" class="image-image undefined image-hand" src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/e8a2ea55-9b2e-4ca0-8127-ca9e0984c49c1718623745662-DESKTOP-HP.jpg" srcset="">
+                                                        </picture>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="myx-indexContainer">
+        <div class="container-base myx-stretch">
+            <div class="container-container">
+                <div class="row-base">
+                    <!-- Empty row for alignment structure -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="myx-indexContainer">
+        <div class="container-base myx-stretch">
+            <div class="container-container container-aspectContainer">
+                <div class="row-base">
+                    <div class="column-base">
+                        <a href="https://myntra.com/online-fashion-store">
+                            <picture draggable="false" class="img-responsive">
+                                <source srcset="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/dde45ca3-3735-46e4-847e-815757c0c2d81718179286708-COUPONS-CORNER.jpg" type="image/webp">
+                                <img class="image-image" src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/dde45ca3-3735-46e4-847e-815757c0c2d81718179286708-COUPONS-CORNER.jpg" alt="Coupon Corner">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="myx-indexContainer">
+        <div class="container-base myx-stretch">
+            <div class="container-container">
+                <div class="row-base">
+                    <div class="column-base">
+                        <a href="#">
+                            <picture draggable="false" class="img-responsive">
+                                <source srcset="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/9e451493-fc53-445e-8799-5027c2bf38e41718624179226-MYNTRA100.jpg" type="image/webp">
+                                <img class="image-image" src="https://assets.myntassets.com/w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/9e451493-fc53-445e-8799-5027c2bf38e41718624179226-MYNTRA100.jpg" alt="Myntra 100">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="column-base">
+                        <a href="https://myntra.com/online-fashion-store">
+                            <picture draggable="false" class="img-responsive">
+                                <source srcset="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/d52307bd-19fb-430e-858b-05dc98a8896d1718624179250-MYNTRA200.jpg" type="image/webp">
+                                <img class="image-image" src="https://assets.myntassets.com/w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/d52307bd-19fb-430e-858b-05dc98a8896d1718624179250-MYNTRA200.jpg" alt="Myntra 200">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="myx-indexContainer">
+        <div class="container-base myx-stretch">
+            <div class="container-container container-aspectContainer">
+                <div class="row-base">
+                    <div class="column-base">
+                        <a href="#">
+                            <picture draggable="false" class="img-responsive">
+                                <source srcset="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/faf138ea-7758-4a07-b53b-06cf4efd0fe81718624006349-Crazy-Deals.jpg" type="image/webp">
+                                <img class="image-image" src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/faf138ea-7758-4a07-b53b-06cf4efd0fe81718624006349-Crazy-Deals.jpg" alt="Crazy Deals">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="carousel-slide-container">
+        <div class="carousel-slide">
+            <div class="container">
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="column">
+                        <a href="https://www.myntra.com/womens-western-wear?f=Brand%3AALCOTT%2CCALLIOPE%2CMANGO%2CTERRANOVA%2CTrendyol%2CUrban%20Revivo&amp;rf=Discount%20Range%3A30.0_100.0_30.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/0aa6a8f5-8bb6-428d-bad4-ba621e20de8e1717865842867-Sassafras-Tokyo_Talkies.png" alt="Sassafras Tokyo Talkies">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.myntra.com/mens-apparel?f=Brand%3AAllen%20Solly%2CAllen%20Solly%20Sport%2CFlying%20Machine%2CJack%20%26%20Jones%2CLevis%2CLouis%20Philippe%2CLouis%20Philippe%20Jeans%2CLouis%20Philippe%20Sport%2CTommy%20Hilfiger%2CU.S.%20Polo%20Assn.%2CU.S.%20Polo%20Assn.%20Tailored%2CUnited%20Colors%20of%20Benetton%3A%3ACategories%3AJeans%2CShirts%2CShorts%2CTrousers%2CTshirts&amp;rawQuery=men%27s%20apparel&amp;rf=Discount%20Range%3A50.0_100.0_50.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/8b56f7b3-e278-4308-8a72-e714d33f38671717865842367-Gant-_mango_man_-_more.png" alt="Men's Apparel">
+                        </a>
+                    </div>
+                    <!-- Second Column -->
+                    <div class="column">
+                        <a href="https://www.myntra.com/mens-apparel?f=Brand%3AFlying%20Machine%2CGANT%2CJack%20%26%20Jones%2CLee%2CLevis%2CMANGO%20MAN%2CMufti%2CU.S.%20Polo%20Assn.%2CU.S.%20Polo%20Assn.%20Denim%20Co.%2CUnited%20Colors%20of%20Benetton%2CWrangler%2CboohooMAN%3A%3ACategories%3AJeans%2CShirts%2CShorts%2CTrousers%2CTshirts&amp;rawQuery=men%27s%20apparel&amp;rf=Discount%20Range%3A30.0_100.0_30.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/11/80750512-3bdd-448a-b274-72b5b519ae311718087001418-image_png322758596.png" alt="Flying Machine">
+                        </a>
+                    </div>
+                    <!-- Third Column -->
+                    <div class="column">
+                        <a href="https://www.myntra.com/mens-apparel?f=Brand%3AHERE%26NOW%2CHIGHLANDER%2CKETCH%2CMast%20%26%20Harbour%2CRoadster%2CSHOWOFF%2CThe%20Indian%20Garage%20Co%3A%3ACategories%3AShirts&amp;rawQuery=mens%20apparel&amp;rf=Discount%20Range%3A60.0_100.0_60.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/11/6b94cf44-dc4d-467d-8ba7-126207e762101718087043412-image_png_1237672505.png" alt="Indian Garage Co">
+                        </a>
+                    </div>
+                    <!-- Fourth Column -->
+                    <div class="column">
+                        <a href="https://www.myntra.com/mens-apparel?f=Brand%3AFlying%20Machine%2CGANT%2CJack%20%26%20Jones%2CLee%2CLevis%2CMANGO%20MAN%2CMufti%2CU.S.%20Polo%20Assn.%2CU.S.%20Polo%20Assn.%20Denim%20Co.%2CUnited%20Colors%20of%20Benetton%2CWrangler%2CboohooMAN%3A%3ACategories%3AJeans%2CShirts%2CShorts%2CTrousers%2CTshirts&amp;rawQuery=men%27s%20apparel&amp;rf=Discount%20Range%3A30.0_100.0_30.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/e0bc9822-ab03-495b-b530-bb381b9436df1717865842687-Campus-_Flying_Machine_-_Min_40_off.png" alt="Campus Flying Machine">
+                        </a>
+                    </div>
+                    <!-- Fifth Column -->
+                    <div class="column">
+                        <a href="https://www.myntra.com/men-footwear?f=Brand%3ACampus%2CCarlton%20London%2CCarlton%20London%20sports%2CDuke%2CFlying%20Machine%3A%3ACategories%3ACasual%20Shoes%2CSports%20Shoes&amp;rf=Discount%20Range%3A40.0_100.0_40.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/62597f95-6bb1-4009-9e86-837ef267a4841717865843088-House_of_Pataudi-_Anouk-__min_55_off.png" alt="House of Pataudi">
+                        </a>
+                    </div>
+                    <!-- Sixth Column -->
+                    <div class="column">
+                        <a href="https://www.myntra.com/men-footwear?f=Brand%3AAnouk%2CFCUK%2CHouse%20of%20Pataudi%2CINVICTUS%2CKenneth%20Cole%2CKook%20N%20Keech%2CMast%20%26%20Harbour%2CNautica%2CRoadster%2CWROGN%2CWROGN%20ACTIVE&amp;rf=Discount%20Range%3A55.0_100.0_55.0%20TO%20100.0">
+                            <img class="carousel-image"  src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/e872454b-e320-4fa0-8f52-f37b60aa789d1717865842750-Tommy_Hilfiger-_Clarks_-_Upto_50_off.png">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.myntra.com/men-footwear?f=Brand%3AArrow%2CClarks%2CHouse%20of%20Pataudi%2CINVICTUS%2CLouis%20Philippe%2CLouis%20Philippe%20Sport%2CPeter%20England%2CRuosh%2CVan%20Heusen%3A%3ACategories%3AFormal%20Shoes&amp;rf=Discount%20Range%3A45.0_100.0_45.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/e872454b-e320-4fa0-8f52-f37b60aa789d1717865842750-Tommy_Hilfiger-_Clarks_-_Upto_50_off.png">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.myntra.com/mfb-brands?f=Categories%3AJeans%2CShirts%2CShorts%2CTrousers%2CTshirts%3A%3AGender%3Amen%2Cmen%20women&amp;rawQuery=mfb%20brands&amp;rf=Discount%20Range%3A50.0_100.0_50.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/274fcecc-5ad3-42c3-a86a-25d9fe884dca1717865841506-lee_-_wrangler.png" srcset="">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.myntra.com/mens-apparel?f=Brand%3ALee%2CWrangler%3A%3ACategories%3AJeans%2CShirts%2CShorts%2CTrousers%2CTshirts&amp;rawQuery=men%27s%20apparel&amp;rf=Discount%20Range%3A50.0_100.0_50.0%20TO%20100.0">
+                            <img class="carousel-image" src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/11/f3b69a2b-bda7-4f4a-bdcd-2ef1e3e6cc7d1718087126250-image_png_1684533839.png" srcset="">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.myntra.com/men-ethnic-wear?f=Categories%3ABlazers%2CSuits%2CWaistcoat&amp;rf=Discount%20Range%3A30.0_100.0_30.0%20TO%20100.0">
+                            <img class="carousel-image"  src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/11/56a13db7-2dca-49ec-996e-92dd4aa6f39a1718087164209-image_png946364045.png" srcset="">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.myntra.com/men-footwear?f=Brand%3AArrow%2CClarks%2CHouse%20of%20Pataudi%2CINVICTUS%2CLouis%20Philippe%2CLouis%20Philippe%20Sport%2CPeter%20England%2CRuosh%2CVan%20Heusen%3A%3ACategories%3AFormal%20Shoes&amp;rf=Discount%20Range%3A45.0_100.0_45.0%20TO%20100.0">
+                            <img class="carousel-image"  src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/e872454b-e320-4fa0-8f52-f37b60aa789d1717865842750-Tommy_Hilfiger-_Clarks_-_Upto_50_off.png">
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.myntra.com/men-footwear?f=Brand%3AALDO%2CCall%20It%20Spring%2CCalvin%20Klein%2CCalvin%20Klein%20Jeans%2CClarks%2CKenneth%20Cole%2CNautica%2CTommy%20Hilfiger%3A%3ACategories%3ACasual%20Shoes%2CSports%20Shoes&amp;rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0">
+                            <img class="carousel-image"  src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/8/96975b25-16c0-48e2-b5cd-fa9a1754cb971717865841970-Wrogn-_nautica.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Container -->
+  <div class="container2">
+    <div class="section-title">Shop By Category</div>
+    <div class="grid">
+      <!-- Cards (30 Total, 5 per row, 6 rows) -->
+      <!-- Repeat these cards to fill the grid -->
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/9cfac75a-bf32-48ee-b1fb-911e7ec967cf1718624006404-Shop-By-Category.jpg" alt="Card 1">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/e08dee2d-0f9b-4fc0-8808-06a422d040801718624757083-Shop-By-Category_HP_02.jpg" alt="Card 2">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/8cd106c7-fad6-4fdb-9855-d6d3ac8774231718624757104-Shop-By-Category_HP_03.jpg" alt="Card 3">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/59767a44-c969-4ff9-8739-df9d78b4df431718624757126-Shop-By-Category_HP_04.jpg" alt="Card 4">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/0fa78ddd-3776-443c-be34-650fa0fd0bb61718624757168-Shop-By-Category_HP_05.jpg" alt="Card 5">
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/0fa78ddd-3776-443c-be34-650fa0fd0bb61718624757168-Shop-By-Category_HP_06.jpg" alt="Card 1">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/17/3c3abd27-1e6f-4890-9d52-51da706f51e81718624757190-Shop-By-Category_HP_07.jpg" alt="Card 2">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/e124fbd8-9306-4900-a3e4-93b1ca2eb5c01718181892474-Shop-By-Category_HP_08.jpg" alt="Card 3">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/9ff3976c-b9d7-4015-8757-e3bc381475201718181892482-Shop-By-Category_HP_09.jpg" alt="Card 4">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/93765524-b600-4d7b-b718-90be235685871718181892490-Shop-By-Category_HP_10.jpg" alt="Card 5">
+      </div>
+
+
+
+
+
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/2a8ed5ac-0e3b-4b58-aaf5-3426a8e294201718181892500-Shop-By-Category_HP_11.jpg" alt="Card 1">
+      </div>
+      <div class="card">
+        <img  src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/8b0b07c1-1adf-4ddd-9f17-7fbe70a00cb01718181892508-Shop-By-Category_HP_12.jpg" alt="Card 2">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/26dbbb8c-f390-43c7-a6fb-3fde604dca731718181892517-Shop-By-Category_HP_13.jpg" alt="Card 3">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/ceef51f9-e856-4641-96d3-f8280bc619f61718181892526-Shop-By-Category_HP_14.jpg" alt="Card 4">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/3789a7a0-08e8-40a0-9a57-6843d520b9901718181892535-Shop-By-Category_HP_15.jpg" alt="Card 5">
+      </div>
+
+
+
+
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/fba1c8fa-4980-41d7-8eb3-1a079eed2cca1718181892544-Shop-By-Category_HP_16.jpg" alt="Card 1">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/142274e6-08c9-4dc7-bf0d-b3254990d1461718181892553-Shop-By-Category_HP_17.jpg" alt="Card 2">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/98d6f0a3-51b3-48f8-abd1-139e7f708c0b1718181892562-Shop-By-Category_HP_18.jpg" alt="Card 3">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/cfacbbdd-cc7f-4e02-bd74-51da566fc0fd1718181892571-Shop-By-Category_HP_19.jpg" alt="Card 4">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/8d7d92de-0d7d-46e0-9e25-9c654de6f4531718181892580-Shop-By-Category_HP_20.jpg" alt="Card 5">
+      </div>
+
+
+
+
+
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/e2c3175f-a038-43c5-b331-03821bb0b6c51718181892589-Shop-By-Category_HP_21.jpg" alt="Card 1">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/437660bc-7404-4b9c-aba8-4d7cd6542ede1718181892598-Shop-By-Category_HP_22.jpg" alt="Card 2">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/fafaaeb2-1d13-43eb-be9c-7ada7b93e63b1718181892608-Shop-By-Category_HP_23.jpg" alt="Card 3">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/4c695de4-21ee-4d14-a525-f1be0cf09f7e1718181892617-Shop-By-Category_HP_24.jpg" alt="Card 4">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/3836ebce-963e-4ac5-8d98-7c6667faca701718181892626-Shop-By-Category_HP_25.jpg" alt="Card 5">
+      </div>
+
+
+
+
+
+
+
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/9d73d774-0d8f-46cb-9099-45f1e881bd541718181892635-Shop-By-Category_HP_26.jpg" alt="Card 1">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/7f4f1305-da0f-440b-b6b5-ea448849b02b1718181892644-Shop-By-Category_HP_27.jpg" alt="Card 2">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/8e037788-54a8-4b9f-865a-f5ec60f80c191718181892653-Shop-By-Category_HP_28.jpg" alt="Card 3">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/bf3e5d72-02ed-4d05-9522-e9a61c2d679c1718181892661-Shop-By-Category_HP_29.jpg" alt="Card 4">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/9fbeb13b-42a9-4397-ab80-08bb15a7b81e1718181892670-Shop-By-Category_HP_30.jpg" alt="Card 5">
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/2f7d9855-fcaf-40e6-8374-3d25f2255a0f1718181892679-Shop-By-Category_HP_31.jpg" alt="Card 1">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/14861c70-6b6c-4f76-a268-3ed2a1a7abb01718181892689-Shop-By-Category_HP_32.jpg" alt="Card 2">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/3e58f925-b8bc-4fd9-9d0d-961dd3ea6b791718181892697-Shop-By-Category_HP_33.jpg" alt="Card 3">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/eade9d9e-bf96-4f3a-a332-47f6574fd1b51718181892706-Shop-By-Category_HP_34.jpg" alt="Card 4">
+      </div>
+      <div class="card">
+        <img src="https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/34bde0fe-9de8-477d-8942-77430bc47e991718181892716-Shop-By-Category_HP_35.jpg" alt="Card 5">
+      </div>
+      <!-- Duplicate these cards to make 30 -->
+      <!-- Add these rows programmatically if possible -->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
