@@ -173,48 +173,26 @@ h1 {
 
 
 .carousel-slide-container {
-    padding: 20px;
-    background-color: #f8f8f8;
-}
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Ensure the columns stay in one line */
+        width: 100%; /* Make the container responsive */
+    }
 
-.carousel-slide {
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
+    .carousel-slide {
+        display: inline-flex; /* Arrange columns horizontally */
+        gap: 10px; /* Add space between columns */
+    }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
+    .column {
+        flex: 0 0 auto; /* Prevent columns from shrinking */
+        width: 150px; /* Adjust as per the image size */
+        text-align: center;
+    }
 
-.row {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.column {
-    flex: 1;
-    min-width: 160px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-image {
-    width: 100%;
-    height: auto;
-    /* object-fit: contain; */
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.carousel-image:hover {
-    transform: scale(1.05);
-}
+    .carousel-image {
+        max-width: 100%; /* Ensure images fit within columns */
+        border-radius: 8px; /* Add a slight border radius for styling */
+    }
 
 @media (max-width: 768px) {
     .column {
@@ -652,8 +630,8 @@ h1 {
 
     <div class="carousel-slide-container">
         <div class="carousel-slide">
-            <div class="container">
-                <div class="row">
+            <!-- <div class="container">
+                <div class="row"> -->
                     <!-- First Column -->
                     <div class="column">
                         <a href="https://www.myntra.com/womens-western-wear?f=Brand%3AALCOTT%2CCALLIOPE%2CMANGO%2CTERRANOVA%2CTrendyol%2CUrban%20Revivo&amp;rf=Discount%20Range%3A30.0_100.0_30.0%20TO%20100.0">
@@ -727,9 +705,9 @@ h1 {
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div>
     </div>
-    
+     -->
 
 
 
